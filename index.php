@@ -21,9 +21,14 @@
         </nav>
     </header>
 
-    <div class="container">
+    <div class="row g-0">
 
-        <?php
+        <div class="col-9">
+
+
+            <div class="container">
+
+                <?php
             $json_text = file_get_contents("./discs.json");
             
             // var_dump($json_text);
@@ -33,29 +38,59 @@
             // var_dump($discs);
             ?>
 
-        <div class="row g-4 my-5 bg-secondary">
-            <h1 class="text-center fw-bold">I TUOI DISCHI</h1>
-            <hr>
-            <?php
+                <div class="row g-4 my-5 bg-secondary">
+                    <h1 class="fw-bold">I TUOI DISCHI</h1>
+
+
+
+                    <hr>
+                    <?php
             foreach($discs as $disc){
                 ?>
-            <div class="col-sm-6 col-lg-4 p-3">
-                <div class="card h-100 border-0">
-                    <div class="p-4 bg-dark h-100">
-                        <img src="<?php echo $disc["url_cover"] ?>" class="card-img-top rounded-0">
-                    </div>
-                    <div class="card-body text-bg-dark text-center p-3">
-                        <h4 class="card-title"><?php echo $disc["titolo"] ?></h4>
-                        <h6 class="card-title"><?php echo $disc["artista"] ?></h6>
-                        <p class="card-text"><?php echo $disc["anno_pubblicazione"] ?></p>
-                        <p class="card-text"><?php echo $disc["genere"] ?></p>
+                    <div class="col-sm-6 col-lg-4 p-3">
+                        <div class="card h-100 border-0">
+                            <div class="p-4 bg-dark h-100">
+                                <img src="<?php echo $disc["url_cover"] ?>" class="card-img-top rounded-0">
+                            </div>
+                            <div class="card-body text-bg-dark text-center p-3">
+                                <h4 class="card-title"><?php echo $disc["titolo"] ?></h4>
+                                <h6 class="card-title"><?php echo $disc["artista"] ?></h6>
+                                <p class="card-text"><?php echo $disc["anno_pubblicazione"] ?></p>
+                                <p class="card-text"><?php echo $disc["genere"] ?></p>
 
+                            </div>
+                        </div>
                     </div>
+                    <?php
+            }
+            ?>
                 </div>
             </div>
-            <?php
-            }
-         ?>
+        </div>
+        <div class="col-3">
+            <div class="container-fluid">
+                <form action="./server.php" method="POST" class="my-5 bg-secondary p-3">
+                    <div class="my-4">
+                        <label for="new-title" class="form-label">Titolo</label>
+                        <input type="text" name="new-title" id="new-title" class="form-control">
+                    </div>
+                    <div class="my-4">
+                        <label for="new-artist" class="form-label">Artista</label>
+                        <input type="text" name="new-artist" id="new-artist" class="form-control">
+                    </div>
+                    <div class="my-4">
+                        <label for="new-genre" class="form-label">Genere</label>
+                        <input type="text" name="new-genre" id="new-genre" class="form-control">
+                    </div>
+                    <div class="my-4">
+                        <label for="new-year" class="form-label">Anno</label>
+                        <input type="text" name="new-year" id="new-year" class="form-control">
+                    </div>
+                    <div class="my-4">
+                        <button class="btn btn-success w-100">AGGIUNGI</button>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
 
