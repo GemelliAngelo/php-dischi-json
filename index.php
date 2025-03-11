@@ -10,17 +10,53 @@
 
 </head>
 
-<body>
+<body class="text-bg-dark">
     <header>
-        <nav class="navbar bg-body-secondary">
-            <div class="container-fluid">
-                <span class="navbar-brand mb-0 h1">Navbar</span>
+        <nav class="navbar bg-black">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="./img/spotify.png" width="50">
+                </a>
             </div>
         </nav>
     </header>
 
     <div class="container">
 
+        <?php
+            $json_text = file_get_contents("./discs.json");
+            
+            // var_dump($json_text);
+            
+            $discs = json_decode($json_text,true);
+            
+            // var_dump($discs);
+            ?>
+
+        <div class="row g-4 my-5 bg-secondary">
+            <h1 class="text-center fw-bold">I TUOI DISCHI</h1>
+            <hr>
+            <?php
+            foreach($discs as $disc){
+                ?>
+            <div class="col-sm-6 col-lg-4 p-3">
+                <div class="card h-100 border-0">
+                    <div class="p-4 bg-dark h-100">
+                        <img src="<?php echo $disc["url_cover"] ?>" class="card-img-top rounded-0">
+                    </div>
+                    <div class="card-body text-bg-dark text-center p-3">
+                        <h4 class="card-title"><?php echo $disc["titolo"] ?></h4>
+                        <h6 class="card-title"><?php echo $disc["artista"] ?></h6>
+                        <p class="card-text"><?php echo $disc["anno_pubblicazione"] ?></p>
+                        <p class="card-text"><?php echo $disc["genere"] ?></p>
+
+                    </div>
+                </div>
+            </div>
+            <?php
+            }
+         ?>
+        </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
