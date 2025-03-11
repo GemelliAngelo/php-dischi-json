@@ -29,14 +29,8 @@
             <div class="container">
 
                 <?php
-            $json_text = file_get_contents("./discs.json");
-            
-            // var_dump($json_text);
-            
-            $discs = json_decode($json_text,true);
-            
-            // var_dump($discs);
-            ?>
+                    require_once "./functions.php";
+                ?>
 
                 <div class="row g-4 my-5 bg-secondary">
                     <h1 class="fw-bold">I TUOI DISCHI</h1>
@@ -71,22 +65,23 @@
             <div class="container-fluid">
                 <form action="./server.php" method="POST" class="my-5 bg-secondary p-3">
                     <div class="my-4">
-                        <label for="new-title" class="form-label">Titolo</label>
-                        <input type="text" name="new-title" id="new-title" class="form-control">
+                        <label for="titolo" class="form-label">Titolo</label>
+                        <input type="text" name="titolo" id="titolo" class="form-control" required>
                     </div>
                     <div class="my-4">
-                        <label for="new-artist" class="form-label">Artista</label>
-                        <input type="text" name="new-artist" id="new-artist" class="form-control">
+                        <label for="artista" class="form-label">Artista</label>
+                        <input type="text" name="artista" id="artista" class="form-control" required>
                     </div>
                     <div class="my-4">
-                        <label for="new-genre" class="form-label">Genere</label>
-                        <input type="text" name="new-genre" id="new-genre" class="form-control">
+                        <label for="anno_pubblicazione" class="form-label">Anno</label>
+                        <input type="text" name="anno_pubblicazione" id="anno_pubblicazione" class="form-control"
+                            required>
                     </div>
                     <div class="my-4">
-                        <label for="new-year" class="form-label">Anno</label>
-                        <input type="text" name="new-year" id="new-year" class="form-control">
+                        <label for="genere" class="form-label">Genere</label>
+                        <input type="text" name="genere" id="genere" class="form-control" required>
                     </div>
-                    <div class="my-4">
+                    <div class="py-4">
                         <button class="btn btn-success w-100">AGGIUNGI</button>
                     </div>
                 </form>

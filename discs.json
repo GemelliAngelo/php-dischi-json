@@ -2,42 +2,42 @@
   {
     "titolo": "New Jersey",
     "artista": "Bon Jovi",
-    "url_cover": "https://m.media-amazon.com/images/I/81Y4qDEwVvL._UF1000,1000_QL80_.jpg",
+    "url_cover": "./img/New Jersey.jpg",
     "anno_pubblicazione": 1988,
     "genere": "Rock"
   },
   {
     "titolo": "Live at Wembley 86",
     "artista": "Queen",
-    "url_cover": "https://m.media-amazon.com/images/I/71g40mlbinL._UF1000,1000_QL80_.jpg",
+    "url_cover": "./img/Live at Wembley Stadium.jpg",
     "anno_pubblicazione": 1992,
     "genere": "Rock"
   },
   {
     "titolo": "Ten's Summoner's Tales",
     "artista": "Sting",
-    "url_cover": "https://m.media-amazon.com/images/I/71zSeFloZqL._UF1000,1000_QL80_.jpg",
+    "url_cover": "./img/Tens Summoners Tales.jpg",
     "anno_pubblicazione": 1993,
     "genere": "Pop Rock"
   },
   {
     "titolo": "Steve Gadd Band",
     "artista": "Steve Gadd Band",
-    "url_cover": "https://m.media-amazon.com/images/I/816pHaCXh+L._UF1000,1000_QL80_.jpg",
+    "url_cover": "./img/Steve Gadd Band.jpg",
     "anno_pubblicazione": 2018,
     "genere": "Jazz Fusion"
   },
   {
     "titolo": "Brave New World",
     "artista": "Iron Maiden",
-    "url_cover": "https://m.media-amazon.com/images/I/81G+hVWSlaL._UF1000,1000_QL80_.jpg",
+    "url_cover": "./img/Brave New World.jpg",
     "anno_pubblicazione": 2000,
     "genere": "Heavy Metal"
   },
   {
     "titolo": "One More Car, One More Rider",
     "artista": "Eric Clapton",
-    "url_cover": "https://m.media-amazon.com/images/I/81MDAIdh78L._UF1000,1000_QL80_.jpg",
+    "url_cover": "./img/One More Car One More Rider.jpg",
     "anno_pubblicazione": 2002,
     "genere": "Blues Rock"
   }
