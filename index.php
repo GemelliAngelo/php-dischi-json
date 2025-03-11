@@ -73,6 +73,11 @@
                         <input type="text" name="artista" id="artista" class="form-control" required>
                     </div>
                     <div class="my-4">
+                        <label for="url_cover" class="form-label">Cover</label>
+                        <input type="text" name="url_cover" id="url_cover" class="form-control"
+                            value="./img/Astroworld.jpg" readonly>
+                    </div>
+                    <div class="my-4">
                         <label for="anno_pubblicazione" class="form-label">Anno</label>
                         <input type="text" name="anno_pubblicazione" id="anno_pubblicazione" class="form-control"
                             required>
